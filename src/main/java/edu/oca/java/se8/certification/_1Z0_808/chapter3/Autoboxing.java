@@ -52,24 +52,4 @@ public class Autoboxing {
         numbers.remove(new Integer(1)); //to force wrapper class use.
         System.out.println(numbers); //[2]
     }
-
-    public void convertArrayToList() {
-        List<String> list = new ArrayList<>();
-        list.add("hawk");
-        list.add("robin");
-        Object[] objectArray = list.toArray();
-        System.out.println(objectArray.length); // 2
-        String[] stringArray = list.toArray(new String[0]);
-        System.out.println(stringArray.length); // 2
-    }
-    
-    public void backedList() {
-        String[] array = { "hawk", "robin" }; // [hawk, robin]
-        List<String> list = Arrays.asList(array); // returns fixed size list
-        System.out.println(list.size()); // 2
-        list.set(1, "test"); // [hawk, test]
-        array[0] = "new"; // [new, test]
-        for (String b : array) System.out.print(b + " "); // new test
-        list.remove(1); // throws UnsupportedOperation Exception
-    } //137
 }
