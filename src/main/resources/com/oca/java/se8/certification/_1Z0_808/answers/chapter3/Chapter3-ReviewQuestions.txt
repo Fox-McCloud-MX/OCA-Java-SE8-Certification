@@ -1,0 +1,79 @@
+page 153 to 214
+
+My Answers:
+
+1  - G      [OK]
+2  - A,C,D  [OK]
+3  - B,C,E  [OK]
+4  - B      [OK]
+5  - F      [OK]
+6  - B      [OK]
+7  - B,D,E  [OK]
+8  - A,D,E  [OK]
+9  - C      [OK]
+10 - B,C    [INCORRECT]
+11 - C      [INCORRECT]
+12 - A      [OK]      
+13 - F      [OK]
+14 - A,C    [OK]
+15 - C,E,F  [OK]
+16 - C      [OK]
+17 - B,D,F  [INCORRECT]
+18 - A,C    [INCORRECT]
+19 - B,C    [OK]
+20 - D      [OK]
+21 - C      [OK]
+22 - D      [OK]
+23 - A      [OK]
+24 - C      [OK]
+25 - F      [INCORRECT]
+26 - A,C    [INCORRECT]
+27 - B      [OK]
+28 - B,D,F  [INCORRECT]
+29 - D      [OK]
+30 - F      [OK]
+31 - B      [OK]
+32 - E      [OK]
+32 - A      [INCORRECT]
+
+20/32 = % [62.5] PASSED
+
+Answers page 342
+
+Incorrect Answer.
+
+10. F. a += 2 expands to a = a + 2. A String concatenated with any other type gives
+a String. Lines 14, 15, and 16 all append to a, giving a result of "2cfalse". The if
+statement on line 18 returns false because the values of the two String objects are the
+same using object equality. The if statement on line 17 returns false because the two
+String objects are not the same in memory. One comes directly from the string pool
+and the other comes from building using String operations.
+
+11. E. Line 6 adds 1 to total because substring() includes the starting index but not
+the ending index. Line 7 adds 0 to total. Line 8 is a problem: Java does not allow the
+indexes to be specified in reverse order and the code throws a StringIndexOutOf-
+BoundsException.
+
+17. F. The ArrayList class defines a method called size().
+
+18. A, C, D, E. An array is not able to change size and can have multiple dimensions. Both
+an array and ArrayList are ordered and have indexes. Neither is immutable. The elements
+can change in value.
+
+25. D. After sorting, hex contains [30, 3A, 8, FF]. Remember that numbers sort before
+letters and strings sort alphabetically. This makes 30 come before 8. A binary search
+correctly finds 8 at index 2 and 3A at index 1. It cannot find 4F but notices it should
+be at index 2. The rule when an item isn’t found is to negate that index and subtract 1.
+Therefore, we get –2–1, which is –3.
+
+26. A, B, D. Lines 5 and 7 use autoboxing to convert an int to an Integer. Line 6 does
+not because valueOf() returns an Integer. Line 8 does not because null is not an int.
+The code does not compile. However, when the for loop tries to unbox null into an
+int, it fails and throws a NullPointerException.
+
+28. D, F. Options A and B are incorrect because LocalDate does not have a public constructor.
+Option C is incorrect because months start counting with 1 rather than 0.
+Option E is incorrect because it uses the old pre–Java 8 way of counting months, again
+beginning with 0. Options D and F are both correct ways of specifying the desired
+date.
+
