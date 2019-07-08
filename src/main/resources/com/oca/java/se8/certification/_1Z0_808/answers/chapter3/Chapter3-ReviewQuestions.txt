@@ -35,8 +35,9 @@ My Answers:
 31 - B      [OK]
 32 - E      [OK]
 32 - A      [INCORRECT]
+33.- A      [INCORRECT]
 
-20/32 = % [62.5] PASSED
+23/32 = % [71.87] PASSED
 
 Answers page 342
 
