@@ -33,7 +33,7 @@ public class Overloading {
         r.fly(56);      //Object o -> Autoboxes to Integer.
         
         System.out.print(glide("a"));           // 1
-        System.out.print(glide("a", "b"));      // 4    
+        System.out.print(glide("a", "b"));      // 4
         System.out.print(glide("a", "b", "c")); // 2
-    }//196
+    }
 }

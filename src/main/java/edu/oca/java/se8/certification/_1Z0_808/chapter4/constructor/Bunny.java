@@ -11,12 +11,12 @@ public class Bunny {
         height = theHeight; // fine because a different name
         this.color = "white"; // fine, but redundant
     }
-    
+
     //using this()
     //If you choose to call it, the this() call must be the first noncommented 
     //statement in the constructor.
     public Bunny(int length) {
-        this("BLACK",length, 20);
+        this("BLACK", length, 20);
         System.out.println("in constructor");
         //this("BLACK",length, 20); //ERROR: call to this must be first statement in constructor
     }
@@ -26,7 +26,7 @@ public class Bunny {
         this.height = height;
         this.length = length;
     }
-    
+
     public static void main(String[] args) {
         Bunny b = new Bunny(1, 2);
         System.out.println(b.length + " " + b.height + " " + b.color); //0 2 white
