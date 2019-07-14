@@ -1,43 +1,42 @@
-page 218 to --
+page 218 to 231
 
 My Answers:
 
-1  - B,C      [CORRECT]
-2  - A,D      [CORRECT]
-3  - C,D,G    [CORRECT]
-4  - A,B,G    [CORRECT]
-5  - D,G      [CORRECT]
-6  - B,c?? [X]
-7  - C [X]
-8  - B,C,E [OK]
-9  - C,E [OK]
-10 - C [X]
-11 - B,E [OK]
-12 - E [X]      
-13 - E [OK]
-14 - C [X]
-15 - D [X]
-16 - B [OK]
-17 - A,D,E [X]
-18 - C,F [X]
-19 - A,B,C,G [X]
-20 - A,B,E [X]
-21 - C [OK]
-22 - E [OK]
-23 - E [X]
-24 - B,C,D,E [X]
-25 - A,E [OK]
-26 - B [X]
-27 - C [OK]
-28 - A,D,F [OK]
-29 - A,F [OK]
+1  - B,C        [CORRECT]
+2  - A,D        [CORRECT]
+3  - C,D,G      [CORRECT]
+4  - A,B,G      [CORRECT]
+5  - D,G        [CORRECT]
+6  - B          [FAIL]
+7  - B,C,D,F    [CORRECT]
+8  - B,C,E      [CORRECT]
+9  - C,E        [CORRECT]
+10 - C          [FAIL]
+11 - B,E        [CORRECT]
+12 - D          [CORRECT]      
+13 - E          [CORRECT]
+14 - B          [CORRECT]
+15 - D          [FAIL]
+16 - B          [CORRECT]
+17 - B,D,E      [CORRECT]
+18 - C,G        [CORRECT]
+19 - A,G        [CORRECT]
+20 - E          [CORRECT]
+21 - C          [CORRECT]
+22 - E          [CORRECT]
+23 - A          [CORRECT]
+24 - B,C,E      [CORRECT]
+25 - A,E        [CORRECT]
+26 - A          [CORRECT]
+27 - C          [CORRECT]
+28 - A,D,F      [CORRECT]
+29 - A,F        [CORRECT]
 
-13/29 = % [] PASSED
+26/29 = 89.65% [PASSED] 
 
-Answers page --
+Answers page 342
 
 Incorrect Answer.
-
 
 6. D. Option D is correct. This is the common implementation for encapsulation by setting
 all fields to be private and all methods to be public. Option A is incorrect because
@@ -48,33 +47,16 @@ read any of the fields. It is essentially a useless class. Option C is incorrect
 package private access applies to the whole package. Option E is incorrect because Java
 has no such capability.
 
-7. B, C, D, F. The two classes are in different packages, which means private access and
-default (package private) access will not compile. Additionally, protected access will
-not compile since School does not inherit from Classroom. Therefore, only line 8 will
-compile because it uses public access.
-
-12. D. There are two details to notice in this code. First, note that RopeSwing has an
-instance initializer and not a static initializer. Since RopeSwing is never constructed,
-the instance initializer does not run. The other detail is that length is static. Changes
-from one object update this common static variable.
-
-14. B. The two valid ways to do this are import static java.util.Collections.*; and
-import static java.util.Collections.sort;. Option A is incorrect because you
-can only do a static import on static members. Classes such as Collections require
-a regular import. Option C is nonsense as method parameters have no business in
-an import. Options D, E, and F try to trick you into reversing the syntax of import
-static.
+10. B. Rope runs line 3, setting LENGTH to 5, then immediately after runs the static initializer,
+which sets it to 10. Line 5 calls the static method normally and prints swing.
+Line 6 also calls the static method. Java allows calling a static method through an
+instance variable. Line 7 uses the static import on line 2 to reference LENGTH.
 
 15. E. The argument on line 17 is a short. It can be promoted to an int, so print() on
 line 5 is invoked. The argument on line 18 is a boolean. It can be autoboxed to a boolean,
 so print() on line 11 is invoked. The argument on line 19 is a double. It can
 be autoboxed to a double, so print() on line 11 is invoked. Therefore, the output is
 intObjectObject and the correct answer is option E.
-
-17. B, D, E. Since Java is pass-by-reference, assigning a new object to a does not change the
-caller. Calling append() does affect the caller because both the method parameter and
-caller have a reference to the same object. Finally, returning a value does pass the reference
-to the caller for assignment to s3.
 
 18. C, G. Since the main() method is in the same class, it can call private methods in the
 class. this() may only be called as the first line of a constructor. this.variableName
@@ -91,26 +73,3 @@ and provide one user-defined constructor. Since a constructor is coded, a defaul
 constructor isn’t supplied. Option G defines a method, but not a constructor. Option A
 does not define a constructor, either. Since no constructor is coded, a default constructor
 is provided for options A and G.
-
-20. E. Options A and B will not compile because constructors cannot be called without
-new. Options C and D will compile but will create a new object rather than setting the
-fields in this one. Option F will not compile because this() must be the first line of a
-constructor. Option E is correct.
-
-23. A. Line 4 instantiates an Order. Java runs the declarations and instance initializers first
-in the order they appear. This sets value to tacf. Line 5 creates another Order and
-initializes value to tacb. The object on line 5 is stored in the same variable line 4 used.
-This makes the object created on line 4 unreachable. When value is printed, it is the
-instance variable in the object created on line 5.
-
-24. B, C, E. value1 is a final instance variable. It can only be set once: in the variable declaration,
-an instance initializer, or a constructor. Option A does not compile because
-the final variable was already set in the declaration. value2 is a static variable. Both
-instance and static initializers are able to access static variables, making options B
-and E correct. value3 is an instance variable. Options D and F do not compile because
-a static initializer does not have access to instance variables.
-
-26. A. This code is correct. Line 8 creates a lambda expression that checks if the age is less
-than 5. Since there is only one parameter and it does not specify a type, the parentheses
-around the type parameter are optional. Line 10 uses the Predicate interface, which
-declares a test() method.
