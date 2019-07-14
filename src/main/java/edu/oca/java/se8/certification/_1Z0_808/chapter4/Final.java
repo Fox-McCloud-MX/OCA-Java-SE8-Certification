@@ -14,4 +14,13 @@ public class Final {
     public Final(int length, int width, int height) {
         volume = length * width * height;
     }
+    
+    final static void method4() { }
+    //public final int void method() { } //DOESN'T COMPILE
+    public final int method() { return 0; } 
+    static final void method3() { }
+    
+    //void final method55() {} //DOESN'T COMPILE
+    final void method55() {} //DOESN'T COMPILE
+    
 }
