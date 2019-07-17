@@ -12,7 +12,7 @@ public class Kangaroo extends Marsupial{
 
     public static void main(String[] args) {
         Kangaroo joey = new Kangaroo();
-        joey.getMarsupialDescription();
-        joey.getKangarooDescription();
+        joey.getMarsupialDescription(); //super.isBiped()-> false
+        joey.getKangarooDescription();  //this.isBiped() -> true
     }
 }
