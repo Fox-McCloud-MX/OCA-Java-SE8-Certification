@@ -1,0 +1,44 @@
+page 291 to 298
+
+My Answers:
+
+1  - B          [CORRECT]
+2  - E          [CORRECT]
+3  - A,B,D,E    [CORRECT]
+4  - E,C        [CORRECT]
+5  - A, D, E, F [CORRECT]
+6  - D          [CORRECT]
+7  - B,C        [CORRECT]
+8  - F          [CORRECT]
+9  - A          [CORRECT]
+10 - B, C, E, F [CORRECT]
+11 - A,D,E      [CORRECT]
+12 - B          [CORRECT]      
+13 - A          [CORRECT]
+14 - B,C        [CORRECT] book isn't correct 
+15 - B          [CORRECT]
+16 - E          [CORRECT]
+17 - B          [CORRECT]
+18 - E          [CORRECT]
+19 - A,C,F      [CORRECT]
+20 - B          [FAIL]
+
+19/20 = 95.00% [PASSED] 
+
+Answers page 346
+
+Incorrect Answer.
+
+1. Option E is a tricky one, because prior to Java 8 all interface methods
+would be assumed to be abstract. Since Java 8 now includes default and static
+methods and they are never abstract, you cannot assume the abstract modifier will be
+implicitly applied to all methods by the compiler.
+
+20. A. The code compiles and runs without issue, so options C, D, and E are incorrect.
+The trick here is that the method fly() is marked as private in the parent class Bird,
+which means it may only be hidden, not overridden. With hidden methods, the specific
+method used depends on where it is referenced. Since it is referenced within the Bird
+class, the method declared on line 2 was used, and option A is correct. Alternatively,
+if the method was referenced within the Pelican class, or if the method in the parent
+class was marked as protected and overridden in the subclass, then the method on line
+9 would have been used.
