@@ -1,0 +1,57 @@
+page 325 to 332
+
+My Answers:
+
+1  - B [CORRECT]
+2  - B,D [CORRECT]
+3  - AMBIGUOUS [FAIL]
+4  - B [CORRECT]
+5  - A,B,D [CORRECT]
+6  - C [CORRECT]
+7  - D [FAIL]
+8  - E [CORRECT]
+9  - B [CORRECT]
+10 - E [CORRECT]
+11 - A [CORRECT]
+12 - A,B,D,G [CORRECT]      
+13 - C,AMBIGUOUS [FAIL]
+14 - A,D [FAIL]
+15 - A,B,D,E [CORRECT]
+16 - B [CORRECT]
+17 - A,C,D,E [CORRECT]
+18 - A,B,C,E []
+19 - C,E [CORRECT]
+20 - A,E [CORRECT]
+
+16/20 = 80.00% [PASSED]
+
+Answers page 349
+
+Incorrect Answer.
+
+1. Legally, you can handle java.lang.Error subclasses, but it’s not a good idea.
+
+3. C. A try statement is required to have a catch clause and/or finally clause. If it goes
+the catch route, it is allowed to have multiple catch clauses.
+
+6. C. The compiler tests the operation for a valid type but not a valid result, so the code
+will still compile and run. At runtime, evaluation of the parameter takes place before
+passing it to the print() method, so an ArithmeticException object is raised.
+
+7. C. The main() method invokes go and A is printed on line 3. The stop method is
+invoked and E is printed on line 14. Line 16 throws a NullPointerException, so stop
+immediately ends and line 17 doesn’t execute. The exception isn’t caught in go, so the
+go method ends as well, but not before its finally block executes and C is printed on
+line 9. Because main() doesn’t catch the exception, the stack trace displays and no further
+output occurs, so AEC was the output printed before the stack trace.
+
+13. A, B, C, E. Classes listed in the throws part of a method declaration must extend
+java.lang.Throwable. This includes Error, Exception, and RuntimeException. Arbitrary
+classes such as String can’t go there. Any Java type, including Exception, can
+be declared as the return type. However, this will simply return the object rather than
+throw an exception.
+
+14. A, C, D, E. A method that declares an exception isn’t required to throw one, making
+option A correct. Runtime exceptions can be thrown in any method, making options
+C and E correct. Option D matches the exception type declared and so is also correct.
+Option B is incorrect because a broader exception is not allowed.
