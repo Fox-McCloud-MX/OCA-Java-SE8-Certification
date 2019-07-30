@@ -1,0 +1,118 @@
+page 27 to 39
+
+My Answers:
+
+1  - D [FAIL] - final is optional
+2  - C [OK]
+3  - C [OK]
+4  - B [OK]
+5  - A [OK]
+6  - D [OK]
+7  - B [OK]
+8  - C [OK]
+9  - D [OK]
+10 - D [FAIL]
+11 - B [OK] AMBIGUOUS
+12 - A [OK]      
+13 - B [FAIL]
+14 - D [OK]
+15 - C [OK]
+16 - B [OK]
+17 - D [OK]
+18 - D [OK]
+19 - A [OK]
+20 - D [OK]
+21 - C [OK]
+22 - C [OK]
+23 - D [OK]
+24 - A [OK]
+25 - D [FAIL]
+26 - C [OK]
+27 - D [OK]
+28 - D [OK]
+29 - NONE ABOVE [REVIEW] - book says C
+30 - B [OK]
+31 - B [OK]
+32 - D [OK]
+33 - A [OK]
+34 - D [OK]
+35 - A [OK]
+36 - B [OK]
+37 - B [OK]
+38 - A [OK]
+39 - D [OK]
+40 - C [OK]
+41 - A [OK]
+42 - B [OK]
+43 - A [OK]
+44 - C [OK]
+45 - D [OK]
+46 - B [OK]
+47 - C [OK]
+48 - D [OK]
+49 - C [OK]
+50 - D [OK]
+
+43/50 = 86.00% [PASSED]
+
+Incorrect Answer.
+
+Answers page 421
+
+1. D. An entry point in a Java application consists of a main() method with a single
+String[] argument, return type of void, and modifiers public and static. The name
+of the variable in the input argument does not matter. Option A is missing the static
+modifier, Option B is missing the String[] argument, and Option C has the wrong
+access modifier and method name. Only Option D fulfills these requirements. Note
+that the modifier final is optional and may be added to an entry point method.
+
+2. A. The diagram is an example of object-oriented design in Java, making Option B a
+true statement. Options C and D are also true, as they follow from the inheritance
+model in the diagram. Option A is the correct answer, since platform independence
+has nothing to do with the diagram.
+
+10. B. Notice in this question that main() is not a static method, therefore it can access
+both class and instance variables. Since there are two class variables and two instance
+variables defined, Option B is the correct answer.
+
+11. B. A class will compile if it has unused or redundant import statements, making
+Option A and C incorrect. Option D is also incorrect as the compiler must be able to
+locate the class of the import statement. The correct answer is Option B. Removing
+unused import statements does not cause a class to become unable to be compiled.
+
+13. D. The java command can only execute compiled .class files, so I is false. Java is
+most certainly object oriented, one of the key design principles, so II is also false. The
+javac command compiles into bytecode, which must be run in a Java virtual machine
+(JVM), and is not native machine code, so III is false as well. Since none of the
+statements are true, Option D is the correct answer.
+
+25. B. There is no such thing as package variables, so Option A is incorrect. Option C is
+incorrect as the variable is only in scope within a specific instance of the class. Option
+D is also incorrect as the variable is only in scope for a single method that it is defined
+in. Option B is the only correct answer as class variables are in scope within the
+program.
+
+29. C. The application prints the third argument of the input methods. Note that double
+quotes "" group input arguments. Therefore, the third argument of Option A is Whitetailed
+deer. The third argument of Option B is 3. The third argument of Option C is
+White-tailed, making it the correct answer. Finally, Option D only has two input
+arguments, leading to
+
+31. B. Java is object oriented, not procedural, so Option A is a false statement. Java allows
+method overloading in subclasses, so Option B is correct. Operator overloading is
+permitted in languages like C++, not Java, so Option C is also untrue. Finally, Option
+D is not a true statement as the JVM manages the location of objects in memory that
+can change and is transparent to the Java application.
+
+48. D. The application compiles without issue, so Option C is incorrect. The application
+does not execute though, as the main() method does not have the correct method
+signature. It is missing the required input argument, an array of String. Trying to
+execute the application without a proper entry point produces an error, making Option
+D the correct answer.
+
+50. C. Garbage collection can happen at any time while an application is running,
+especially if the available memory suddenly becomes low, making Option A incorrect.
+Option B is also incorrect, since it is trivial to create a Java application with an infinite
+loop that never terminates. Option D is incorrect because the computer must be able
+to run the JVM in order to execute a Java class. Option C is the only correct answer, as
+the JVM does require an entry point method to begin executing the application.
