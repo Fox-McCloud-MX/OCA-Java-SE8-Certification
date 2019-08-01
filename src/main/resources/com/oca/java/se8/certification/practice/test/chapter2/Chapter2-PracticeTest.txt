@@ -1,0 +1,125 @@
+page 40 to 54
+
+My Answers:
+
+1  - A [OK]
+2  - D [OK]
+3  - B [OK]
+4  - B [OK]
+5  - B [OK]
+6  - C [OK]
+7  - C [OK]
+8  - C [OK]
+9  - C [OK]
+10 - C [OK]
+11 - A [FAIL]
+12 - A [OK]      
+13 - D [OK]
+14 - B [OK]
+15 - B [FAIL]
+16 - A [OK]
+17 - B [FAIL]
+18 - D [OK]
+19 - D [FAIL]
+20 - C [OK]
+21 - A [FAIL]
+22 - B [OK]
+23 - C [OK]
+24 - D [OK]
+25 - B [FAIL]
+26 - C [OK]
+27 - C [FAIL]
+28 - C [OK]
+29 - D [OK]
+30 - A [OK]
+31 - C [OK]
+32 - A [OK]
+33 - A [OK]
+34 - D [OK]
+35 - A [FAIL]
+36 - D [OK] book isn't correct
+37 - B [OK]
+38 - C [OK]
+39 - C [OK]
+40 - B [OK]
+41 - A [OK]
+42 - A [OK]
+43 - B [OK]
+44 - D [FAIL]
+45 - A [FAIL]
+46 - C [FAIL]
+47 - C [OK]
+48 - B [OK] book isn't correct
+49 - B [OK]
+50 - C [OK]
+
+39/50 = 78.00% [PASSED]
+
+Incorrect Answer.
+
+Answers page 427
+
+11. D. Java uses the suffix f to indicate a number is a float. Java automatically widens a
+type, allowing a float to be assigned to either a float or a double. This makes both
+lines p1 and p3 compile. Line p2 does compile without a suffix. Line p4 does not
+compile without a suffix and therefore is the answer.
+
+15. C. Lines 2 and 7 illustrate instance initializers. Line 6 is a static initializer. Lines 3–5
+are a constructor.
+
+17. A. The finalize() method may not be called, such as if your program crashes.
+However, it is guaranteed to be called no more than once.
+
+19. C. Lines 15–17 create the three objects. Lines 18–19 change the references so link2
+and link3 point to each other. The lines 20–21 wipe out two of the original references.
+This means the object with name as x is inaccessible.
+
+21. B. Integer is the name of a class in Java. While it is bad practice to use the name of a
+class as your local variable name, this is legal. Therefore, k1 does compile. It is not
+legal to use a reserved word as a variable name. All of the primitives including int are
+reserved words. Therefore, k2 does not compile, and Option B is the answer. Line k4
+doesn’t compile either, but the question asks about the first line to not compile.
+
+25. C. Local variables do not have a default initialization value. If they are referenced
+before being set to a value, the code does not compile. Therefore, Option C is correct.
+If the variable was an instance variable, Option B would be correct. Option D is tricky.
+A local variable will compile without an initialization if it isn’t referenced anywhere or
+it is assigned a value before it is referenced.
+
+27. B. Option B is an example of autoboxing. Java will automatically convert from
+primitive to wrapper class types and vice versa. Option A is incorrect because you can
+only call methods on an object. Option C is incorrect because this method is used for
+converting to a wrapper class from a String. Option D is incorrect because autoboxing
+will convert the primitive to an object before adding it to the ArrayList.
+
+35. C. All three references point to the String apple. This makes the other two String
+objects eligible for garbage collection and Option C correct.
+
+[BOOK ISN'T CORRECT]
+36. B. A constructor can only be called with a class name rather than a primitive, making
+Options A and C incorrect. The newly constructed Double object can be assigned to
+either a double or Double thanks to autoboxing. Therefore, Option B is correct.
+
+44. A. Options B and C do not compile. In Java, braces are for arrays rather than instance
+variables. Option A is the correct answer. It uses dot notation to access the instance
+variable. It also shows that a private variable is accessible in the same class and that a
+narrower type is allowed to be assigned to a wider type.
+
+45. B. The parseInt() methods return a primitive. The valueOf() methods return a
+wrapper class object. In real code, autoboxing would let you assign the return value to
+either a primitive or wrapper class. In terms of what gets returned directly, Option B is
+correct.
+
+46. B. On line 9, all three objects have references. The elena and zoe objects have a direct
+reference. The diana object is referenced through the elena object. On line 10, the
+reference to the diana object is replaced by a reference to the zoe object. Therefore, the
+diana object is eligible to be garbage collected, and Option B is correct.
+
+[the ouput is [B] play-play- not [A]]
+48. A. Remember that garbage collection is not guaranteed to run on demand. If it doesn’t
+run at all, Option B would be output. If it runs at the requested point, Option C would
+be output. If it runs right at the end of the main() method, Option D would be output.
+Option A is the correct answer because play is definitely called twice. Note that you
+are unlikely to see all these scenarios if you run this code because we have not used
+enough memory for garbage collection to be worth running. However, you still need to
+be able to answer what could happen regardless of it being unlikely.
