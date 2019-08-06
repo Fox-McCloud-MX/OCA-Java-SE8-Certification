@@ -53,7 +53,7 @@ My Answers:
 49 - A [OK]
 50 - C [OK]
 
-35/50 = 70.00% [PASSED]
+35/50 = 70.00% [XXXX]
 
 Incorrect Answer.
 
