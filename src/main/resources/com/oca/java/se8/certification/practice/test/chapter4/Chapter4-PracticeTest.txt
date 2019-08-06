@@ -1,125 +1,94 @@
-page 55 to 70
+page 71 to 85
 
 My Answers:
 
 1  - B [OK]
-2  - A [OK] --tip
-3  - C [OK]
-4  - A [FAIL]
+2  - B [OK]
+3  - A [FAIL]
+4  - C [OK]
 5  - C [OK]
-6  - B [OK]
-7  - B [OK]
-8  - C [OK]
-9  - C [OK]
-10 - A [OK]
-11 - D [OK]
-12 - C [FAIL]   
-13 - B [OK]
-14 - D [OK]
-15 - C [OK]
-16 - B [OK]
-17 - B [OK]
-18 - B [OK]
-19 - D [OK]
-20 - B [FAIL]
-21 - A [FAIL]
-22 - B [OK]
-23 - B [OK]
-24 - B [OK]
-25 - C [OK]
-26 - C [FAIL] AMBIGUOUS
-27 - D [FAIL]
-28 - D [OK]
-29 - B [OK]
-30 - C [OK]
-31 - A [OK]
-32 - B [OK]
+6  - A [OK]
+7  - C [OK]
+8  - B [OK]
+9  - B [OK] 
+10 - B [OK]
+11 - B [OK]
+12 - D [FAIL]
+13 - C [FAIL]
+14 - C [OK]
+15 - A [OK]
+16 - C [OK]
+17 - D [FAIL]
+18 - A [OK]
+19 - B [OK]
+20 - B [OK]
+21 - B [OK]
+22 - D [OK]
+23 - C [OK]
+24 - C [OK]
+25 - A [FAIL]
+26 - B [OK]
+27 - D [OK]
+28 - B [FAIL]
+29 - C [OK] 
+30 - B [OK]
+31 - C [OK]
+32 - A [FAIL]
 33 - D [OK]
 34 - C [OK]
-35 - B [FAIL]
-36 - D [OK]
-37 - C [OK]
+35 - D [OK]
+36 - C [OK]
+37 - D [OK]
 38 - D [OK]
-39 - C [OK]
+39 - B [OK]
 40 - B [OK]
-41 - A [OK]
-42 - D [FAIL]
-43 - D [OK]
-44 - A [OK]
-45 - B [OK]
-46 - B [FAIL]
-47 - D [OK]
-48 - C [OK]
-49 - A [OK]
-50 - C [OK]
+41 - D [OK]
+42 - C [FAIL]
+43 - A [OK]
+44 - C [OK]
+45 - A [OK]
+46 - B [OK]
+47 - A [OK]
+48 - A [OK]
+49 - B [OK]
+50 - C [OK] REVIEW
 
-35/50 = 70.00% [XXXX]
+42/50 = 84.00% [PASSED]
 
 Incorrect Answer.
 
-Answers page 432
+Answers page 439
 
-4. D. This code does not compile because it has two else statements as part of a single ifthen
-statement. Notice that the second if statement is not connected to the last else
-statement. For this reason, Option D, none of the above, is the correct answer.
+3. D. Trick question! While int is a primitive, all arrays are objects. One way to tell is
+that an array has a public instance variable called length. Another way is that you can
+assign it a variable of type Object. Therefore, Option D is correct.
 
-12. D. For this question, it helps to notice that the second if-then statement is not
-connected to the first if-then statement, as there is no else joining them. When this
-code executes, the first if-then statement outputs Not enough since flair is >= 15 and
-< 37. The second if-then statement is then evaluated. Since flair is not 37, the
-expression Too many is outputted. Since
+12. C. When using an array initializer, you are not allowed to specify the size separately.
+The size is inferred from the number of elements listed. Therefore, tiger and ohMy are
+incorrect. When you’re not using an array initializer, the size is required. An empty
+array initializer is allowed. Option C is correct because lion and bear are legal.
 
-20. C. While the code involves numerous operations, none of that matters for solving this
-problem. The key to solving it is to notice that the line that assigns the leaders
-variable has an uneven number of parentheses. Without balanced parentheses, the
-code will not compile, making Option C the correct answer.
+13. B. Since no elements are being provided when creating the arrays, a size is required.
+Therefore, lion and bear are incorrect. The braces containing the size are required to
+be after the type, making ohMy incorrect. The only one that is correct is tiger, making
+the correct answer Option B.
 
-21. B. Remember that Java evaluates + from left to right. The first two values are both
-numbers, so the + is evaluated as numeric addition, resulting in a reduction to 11 +
-"7" + 8 + 9. The next two terms, 11 + "7", are handled as string concatenation since
-one of the terms is a String. This allows us to reduce the expression to "117" + 8 + 9.
-Likewise, the final two terms are each evaluated one at a time with the String on the
-left. Therefore, the final value is 11789, making Option B the correct answer.
+17. B. The code sorts before calling binarySearch(), so it meets the precondition for that
+method. The target string of "Mac" is the second element in the sorted array. Since
+array indices begin with zero, the second position is index 1, and Option B is correct.
 
-26. A. For this question, remember that if two String objects evaluate to true using ==,
-then they are the same object. If they are the same String object, equals() will
-trivially return true. Option A correctly reflects this principle. Option B is incorrect as
-two String objects that are not the same may still be equivalent in terms of equals().
-For example, apples == new String(apples) evaluates to false, but equals() will
-evaluate to true on these String objects. Likewise, Options C and D are also incorrect
-because two String objects that are equivalent in terms of equals() may be different
-objects.
+25. C. Calling toString() on an array doesn’t output the contents of the array, making
+Option C correct. If you wanted Option A to be the answer, you’d have to call
+Arrays.toString(strings).
 
-27. B. The statement compiles and runs without issue, making Options C and D incorrect.
-Since we are given that myTestVariable is not null, the statement will always evaluate
-to false, making Option B the correct answer. Note that if myTestVariable was null,
-then the code would still compile but throw a NullPointerException calling equals()
-at runtime.
+28. D. Line 6 assigns an int to a cell in a 2D array. This is fine. Line 7 casts to a general
+Object[]. This is dangerous, but legal. Why is it dangerous, you ask? That brings us to
+line 8. The compiler can’t protect us from assigning a String to the int[] because the
+reference is more generic. Therefore, line 8 throws an ArrayStoreException because
+the type is incorrect, and Option D is correct. You couldn’t have assigned an int on
+line 8 either because obj[3] is really an int[] behind the scenes and not an int.
 
-35. C. In Option A, the division operator / incorrectly comes after the decrement ––
-operator. In Option B, the subtraction operator - incorrectly comes after the modulus
-% operator. In Option D, the division operator / incorrectly comes after the subtraction
-- operator. The correct answer is Option C, where all three operators have the same
-order of precedence.
-
-41. A. All of the terms of getResult() in this question evaluate to 0, since they are all less
-than or equal to 5. The expression can therefore be reduced to 0+0+0+0+"". Since Java
-evaluates the + operator from left to right, the four operands on the left are applied
-using numeric addition, resulting in the expression 0+"". This expression just converts
-the value to a String, resulting in an output of 0, making Option A the correct answer.
-
-42. A. The code compiles without issue, so Option D is incorrect. The key here is that the
-if-then statement in the runTest() method uses the assignment operator (=) instead
-of the (==) operator. The result is that spinner is assigned a value of true, and the
-statement (spinner = roller) returns the newly assigned value. The method then
-returns up, making Option A the correct answer. If the (==) operator had been used in
-the if-then statement, then the process would have branched to the else statement,
-with down being returned by the method.
-
-46. A. The application uses the conditional conjunction && operator to test if weather[0] is
-null, but unfortunately this test does not work on zero-length arrays. Therefore, it is
-possible this code will throw an ArrayIndexOutOfBoundsException at runtime. The
-second part of the expression evaluates to true if the first input of weather matches
-sunny. The final part of the expression, && !false, is a tautology in that it is always
-true and has no impact on the expression. Either an exception will be thrown or text
-will be output, based on the value of weather, therefore Option A is the correct answer.
+45. A. In Java, arrays are indexed starting with 0. While it is unusual for the loop to start
+with 1, this does not cause an error. It does cause the code to output six lines instead
+of seven since the loop doesn’t cover the first array element. Therefore, Option A is
+correct.
