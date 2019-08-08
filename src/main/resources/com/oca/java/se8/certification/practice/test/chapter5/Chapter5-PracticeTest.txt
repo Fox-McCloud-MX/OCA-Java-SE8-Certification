@@ -1,0 +1,116 @@
+page 87 to 100
+
+My Answers:
+
+1  - D [OK]
+2  - B [OK]
+3  - A [OK]
+4  - C [OK]
+5  - B [OK]
+6  - A [OK]
+7  - B [OK]
+8  - C [OK]
+9  - A [OK]
+10 - A [OK]
+11 - B [OK]
+12 - B [OK] container--
+13 - A [OK]
+14 - A [OK]
+15 - D [OK]
+16 - D [FAIL]
+17 - C [OK]
+18 - D [OK]
+19 - C [OK]
+20 - A [OK]
+21 - B [FAIL]
+22 - B [OK]
+23 - C [OK]
+24 - B [OK]
+25 - C [OK]
+26 - C [OK]
+27 - B [OK]
+28 - D [OK]
+29 - B [OK]
+30 - B [OK]
+31 - D [FAIL] i--, -=3
+32 - D [OK] i--
+33 - C [OK]
+34 - B [FAIL]
+35 - D [OK] i--
+36 - B [OK]
+37 - C [OK]
+38 - D [FAIL]
+39 - C [OK]
+40 - B [FAIL]
+41 - C [OK]
+42 - A [FAIL]
+43 - B [OK]
+44 - B [OK]
+45 - D [FAIL]
+46 - C [OK]
+47 - B [FAIL]
+48 - C [OK] REVIEW
+49 - D [OK]
+50 - B [OK]
+
+39/50 = 78.00% [XXXX]
+
+Incorrect Answer.
+
+Answers page 444
+
+16. B. Since count is a class variable that isn’t specifically initialized, it defaults to 0. On
+the first iteration of the loop, "Washington", is 11 characters and count is set to 1. The
+if statement’s body is not run. The loop then proceeds to the next iteration. This time,
+the post-increment operator uses index 1 before setting count to 2. "Monroe" is
+checked, which is only 6 characters. The break statement sends the execution to after
+the loop and 2 is output. Option B is correct.
+
+21. D. Braces are optional around loops if there is only one statement. Parentheses are not
+allowed to surround a loop body though, so the code does not compile, and Option D is
+correct.
+
+31. A. On the first iteration of the outer loop, i starts out at 10. The inner loop sees that 10
+> 3 and subtracts 3, making the 7 the new value of i. Since 7 > 3, we subtract 3 again,
+making i set to 4. Yet again 4 > 3, so i becomes 1. Then k is finally incremented to 1.
+The outer loop decrements i i, making it 0. The boolean condition sees that 0 is not
+greater than 0. The outer loop ends and 1 is printed out. Therefore, Option A is correct.
+
+34. C. Multiple update expressions are separated with a comma rather than a semicolon.
+Tricky, we know. But it is an important distinction. This makes Option C correct.
+
+37. C. The code compiles as is. However, we aren’t asked about whether the code compiles
+as is. Line 27 refers to a loop label. While the label is still present, it no longer points
+to a loop. This causes the code to not compile, and Option C is correct.
+
+38. C. The continue statement is useless here since there is no code later in the loop to
+skip. The continue statement merely resumes execution at the next iteration of the
+loop, which is what would happen if the if-then statement was empty. Therefore,
+count increments for each element of the array. The code outputs 4, and Option C is
+correct.
+
+40. A. At first this code appears to be an infinite loop. However, there is a break statement.
+On line 6, count is set to 0. On line 9, it is changed to 1. Then the condition on line 10
+runs. count is less than 2 so the inner loop continues. Then count is set to 2 on the
+next iteration of the inner loop. The loop condition on line 10 runs again and this time
+is false. The inner loop is completed. Then line 11 of the outer loop runs and sends
+execution to after the loop on line 13. At this point count is still 2, so Option A is
+correct.
+
+42. B. This code is correct. It initializes two variables and uses both variables in the
+condition check and the update statements. Since it checks the size of both arrays
+correctly, it prints the first two sets of elements, and Option B is correct.
+
+45. B. The initializer, which is alpha, runs first. Then Java checks the condition, which is
+beta, to see if loop execution should start. Then the loop body, which is delta, runs.
+After the loop execution, the updater, which is gamma, runs. Then the loop condition,
+which is beta, is checked again. Therefore, Option B is correct.
+
+47. D. The first time the loop condition is checked, the variable tie is null. However, the
+loop body is empty due to the semicolon right after the condition. This means the loop
+condition keeps running with no opportunity for tie to be set. Therefore, this is an
+infinite loop, and Option D is correct.
+
+48. C. Remember to look for basic errors before wasting time tracking the flow. In this
+case, the label of the loop is trying to use the keyword for. This is not allowed, so the
+code does not compile. If the label was valid, Option A would be correct.
