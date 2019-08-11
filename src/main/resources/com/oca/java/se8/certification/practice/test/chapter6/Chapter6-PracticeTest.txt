@@ -2,18 +2,18 @@ page 101 to 117
 
 My Answers:
 
-1  - B ??[]
+1  - B [FAIL]
 2  - B [OK]
-3  - C []
-4  - B [] REVIEW
+3  - C [FAIL]
+4  - B [FAIL]
 5  - B [OK]
-6  - C [OK] REVIEW
-7  - B [OK] REVIEW
-8  - C []
-9  - A [] REVIEW
-10 - C [] REVIEW
-11 - C [] REVIEW
-12 - A ??D[] REVIEW
+6  - C [OK]
+7  - B [OK] book isn't correct
+8  - A [OK] with public in lower case
+9  - A [FAIL]
+10 - A [OK]
+11 - C [FAIL] AMBIGUOUS
+12 - D [OK]
 13 - B [] REVIEW
 14 - A [OK]
 15 - B []
@@ -78,6 +78,7 @@ Option A incorrect. The no-argument version of the nested() method does not retu
 a value, and trying to output a void return type in the print() method throws an
 exception at runtime.
 
+[super() and this() are excluyent]
 7. B. Options A, C, and D are true statements about calling this() inside a constructor.
 Option B is incorrect because a constructor can only call this() or super() on the first
 line of the constructor, but never both in the same constructor. If both constructors
@@ -85,6 +86,7 @@ were allowed to be called, there would be two separate calls to super(), leading
 duplicate initialization of parent constructors, since the other constructor referenced
 by this() would also call super() (or be chained to one that eventually calls super()).
 
+[option B is long not public access modifier]
 8. B. Option A is incorrect because the public access modifier starts with a lowercase
 letter. Options C and D are incorrect because the return types, void and String, are
 incompatible with the method body that returns an integer value of 10. Option B is
@@ -97,16 +99,6 @@ public variables are only available if a reference to the object is maintained a
 instances. Option B is incorrect because there is no local keyword in Java. Option D is
 also incorrect because a private instance variable is only accessible within the
 instance that created it.
-
-10. A. First off, all of the lines compile but they produce various different results.
-Remember that the default initialization of a boolean instance variable is false,
-making outside false at line p1. Therefore, this(4) will cause rope to be set to 5,
-while this(5) will cause rope to be set to 6. Since 5 is the number we are looking for,
-Option A is correct, and Option C is incorrect. Option B is incorrect. While the
-statement does create a new instance of Jump, with rope having a value of 5, that
-instance is nested and the value of rope does not affect the surrounding instance of
-Jump that the constructor was called in. Option D is also incorrect. The value assigned
-to rope is 4, not the target 5.
 
 11. B. Options A, C, and D are true statements. In particular, Option C allows us to write
 the equals() methods between two objects that compare private attributes of the
