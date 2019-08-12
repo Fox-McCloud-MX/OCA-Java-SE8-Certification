@@ -14,46 +14,46 @@ My Answers:
 10 - A [OK]
 11 - C [FAIL] AMBIGUOUS
 12 - D [OK]
-13 - B [] REVIEW
+13 - B [FAIL]
 14 - A [OK]
-15 - B []
-16 - D [] REVIEW
+15 - B [FAIL]
+16 - D [OK]
 17 - D [OK]
-18 - A ??[OK] REVIEW
-19 - D []
-20 - C []
-21 - C [OK] REVIEW
+18 - A [OK]
+19 - D [FAIL] is correct, but not the best way
+20 - C [OK] book isn't correct
+21 - C [OK]
 22 - D [OK]
 23 - B [OK]
-24 - D []
+24 - D [FAIL]
 25 - A [OK]
 26 - D [OK]
 27 - B [OK]
 28 - C [OK]
 29 - A [OK]
 30 - C [OK]
-31 - B []
-32 - C []
-33 - D []
-34 - D [] REVIEW
+31 - B [OK] AMBIGUOUS
+32 - C [FAIL]
+33 - D [FAIL]
+34 - D [FAIL]
 35 - C [OK]
-36 - B []
+36 - B [OK] book isn't correct
 37 - D [OK]
-38 - D []
-39 - D [] REVIEW
+38 - D [OK] AMBIGUOUS
+39 - A [OK]
 40 - B [OK]
 41 - C [OK]
 42 - D [OK]
-43 - B []
+43 - B [FAIL]
 44 - D [OK]
 45 - D [OK]
-46 - A [OK] REVIEW
-47 - B [] REVIEW
+46 - A [OK]
+47 - B [FAIL]
 48 - A [OK]
 49 - B [OK]
-50 - A []
+50 - A [FAIL]
 
-26/50 = 52.00% [FAILED]
+35/50 = 70.00% [PASSED]
 
 Incorrect Answer.
 
@@ -141,19 +141,6 @@ in the main() method. The result is that mySpeed continues to have a single elem
 with the default int value of 0. For these reasons, Option B is incorrect, and Option C
 is correct.
 
-16. B. Options A and D would not allow the class to compile because two methods in the
-class cannot have the same name and arguments, but a different return value. Option
-C would allow the class to compile, but it is not a valid overloaded form of our
-findAverage() method since it uses a different method name. Option B is a valid
-overloaded version of the findAverage() method, since the name is the same but the
-argument list differs.
-
-18. A. Option B is incorrect because String values are immutable and cannot be modified.
-Options C and D are also incorrect since variables are passed by value, not reference,
-in Java. Option A is the correct answer. The contents of an array can be modified when
-passed to a method, since a copy of the reference to the object is passed. For example,
-the method can change the first element of a non-empty array.
-
 19. B. Option A is not a valid syntax in Java. Option C would be correct if there was a
 static import, but the question specifically says there are not any. Option D is almost
 correct, since it is a way to call the method, but the question asks for the best way to
@@ -161,6 +148,7 @@ call the method. In that regard, Option B is the best way to call the method, si
 are given that two classes are in the same package, therefore the package name would
 not be required.
 
+[void ommit return statement in the method body]
 20. D. Options A and B are incorrect because a method with a non-void return type
 requires that the method return a value using the return statement. Option C is also
 incorrect since a method with a void return type can still call the return command
@@ -214,6 +202,7 @@ assumed to be an int, to a short, as shown in new Short((short)4). Option B is t
 correct answer since a byte value can be easily promoted to short and returned by the
 method.
 
+[the final modifier is allowed to appear before the access modifier]
 36. C. The declaration of monday does not compile, because the value of a static final
 variable must be set when it is declared or in a static initialization block. The
 declaration of tuesday is fine and compiles without issue. The declaration of
@@ -227,14 +216,6 @@ members in the same class. Therefore, the public access modifier allows access t
 everything the private access modifier does, and more, making Option A the correct
 answer. Options B, C, and D are incorrect because the first term is a more restrictive
 access modifier than the second term.
-
-39. A. The code compiles without issue, so Option D is incorrect. The key here is that Java
-uses pass by value to send object references to methods. Since the Phone reference p
-was reassigned in the first line of the sendHome() method, any changes to the p
-reference were made to a new object. In other words, no changes in the sendHome()
-method affected the object that was passed in. Therefore, the value of size was the
-same before and after the method call, making the output 3 and Option A the correct
-answer.
 
 43. A. Option A is the correct answer because the first line of a constructor could be
 this() or super(), making it an untrue statement. Option B is a true statement
