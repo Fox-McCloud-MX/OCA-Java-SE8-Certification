@@ -4,4 +4,8 @@ public class Bird {
     public final boolean hasFeathers() {
         return true;
     }
+    
+    private final boolean hasFeathers1(String a) {
+        return true;
+    }
 }

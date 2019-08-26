@@ -1,0 +1,252 @@
+page 119 to 134
+
+My Answers:
+
+1  - B [FAIL]
+2  - B [OK]
+3  - C [OK]
+4  - B [OK]
+5  - A [OK]
+6  - B [OK]
+7  - D [FAIL]
+8  - D [OK]
+9  - D [FAIL]
+10 - C [OK]
+11 - C [OK]
+12 - A [OK] 
+13 - B [OK] 
+14 - C [OK] 
+15 - B [OK]
+16 - C [OK]
+17 - C [AMBIGUOUS] book isn't correct
+18 - D [FAIL]
+19 - C [] REVIEW
+20 - C [OK]
+21 - A [OK]
+22 - A []
+23 - C []
+24 - C []
+25 - A [] REVIEW
+26 - B [OK]
+27 - C [OK]
+28 - C [OK]
+29 - A [OK] REVIEW
+30 - A []
+31 - A [] REVIEW
+32 - C [OK]
+33 - C []
+34 - C [OK]
+35 - B []
+36 - C []
+37 - D []
+38 - A [OK]
+39 - B [OK] 
+40 - D [] REVIEW
+41 - B [] REVIEW
+42 - A [] REVIEW
+43 - B []
+44 - D [] REVIEW
+45 - A []
+46 - A []
+47 - D [OK]
+48 - D [] REVIEW
+49 - A []
+50 - B [] REVIEW
+
+20/50 = 40.00% [FAILED]
+
+Incorrect Answer.
+
+Answers page 458
+
+1. C. The code does not compile, so Option A is incorrect. This code does not compile for
+two reasons. First, the name variable is marked private in the Cinema class, which
+means it cannot be accessed directly in the Movie class. Next, the Movie class defines a
+constructor that is missing an explicit super() statement. Since Cinema does not
+include a no-argument constructor, the no-argument super() cannot be inserted
+automatically by the compiler without a compilation error. For these two reasons, the
+code does not compile, and Option C is the correct answer.
+
+7. B. The drive() method in the Car class does not override the version in the Automobile
+class since the method is not visible to the Car class. Therefore, the final attribute in
+the Automobile class does not prevent the Car class from implementing a method with
+the same signature. The drive() method in the ElectricCar class is a valid override of
+the method in the Car class, with the access modifier expanding in the subclass. For
+these reasons, the code compiles, and Option D is incorrect. In the main() method, the
+object created is an ElectricCar, even if it is assigned to a Car reference. Due to
+polymorphism, the method from the ElectricCar will be invoked, making Option B
+the correct answer.
+
+9. C. There are three problems with this method override. First, the watch() method is
+marked final in the Television class. The final modifier would have to be removed
+from the method definition in the Television class in order for the method to compile
+in the LCD class. Second, the return types void and Object are not covariant. One of
+them would have to be changed for the override to be compatible. Finally, the access
+modifier in the child class must be the same or broader than in the parent class. Since
+package-private is narrower than protected, the code will not compile. For these
+reasons, Option C is the correct answer.
+
+[in java 8 interface can contain default and static method]
+17. D. An abstract class can contain both abstract and concrete methods, while an
+interface can only contain abstract methods. With Java 8, interfaces can now have
+static and default methods, but the question specifically excludes them, making
+Option D the correct answer. Note that concrete classes cannot contain any abstract
+methods.
+
+18. C. The code does not compile, so Option D is incorrect. The IsoscelesRightTriangle
+class is abstract; therefore, it cannot be instantiated on line g3. Only concrete classes
+can be instantiated, so the code does not compile, and Option C is the correct answer.
+The rest of the lines of code compile without issue. A concrete class can extend an
+abstract class, and an abstract class can extend a concrete class. Also, note that the
+override of getDescription() has a widening access modifier, which is fine per the
+rules of overriding methods.
+
+19. D. The play() method is overridden in Saxophone for both Horn and Woodwind, so the
+return type must be covariant with both. Unfortunately, the inherited methods must
+also be compatible with each other. Since Integer is not a subclass of Short, and vice
+versa, there is no subclass that can be used to fill in the blank that would allow the
+code to compile. In other words, the Saxophone class cannot compile regardless of its
+implementation of play(), making Option D the correct answer.
+
+22. B. Options A and C are both true statements. Either the unknownBunny reference
+variable is the same as the object type or it can be explicitly cast to the Bunny object
+type, therefore giving it access to all its members. This is the key distinction between
+reference types and object types. Assigning a new reference does not change the
+underlying object. Option D is also a true statement since any superclass that Bunny
+extends or interface it implements could be used as the data type for unknownBunny.
+Option B is the false statement and the correct answer. An object can be assigned to a
+reference variable type that it inherits, such as Object unknownBunny = new Bunny().
+
+23. D. An abstract method cannot include the final or private method. If a class
+contained either of these modifiers, then no concrete subclass would ever be able to
+override them with an implementation. For these reasons, Options A and B are
+incorrect. Option C is also incorrect because the default keyword applies to concrete
+interface methods, not abstract methods. Finally, Option D is correct. The protected,
+package-private, and public access modifiers can each be applied to abstract methods.
+
+24. D. The declaration of Sphere compiles without issue, so Option C is incorrect. The Mars
+class declaration is invalid because Mars cannot extend Sphere, an interface, nor can
+Mars implement Planet, a class. In other words, they are reversed. Since the code does
+not compile, Option D is the correct answer. Note that if Sphere and Planet were
+swapped in the Mars class definition, the code would compile and the output would be
+Mars, making Option A the correct answer.
+
+25. B. A reference to a class can be implicitly assigned to a superclass reference without an
+explicit class, making Option B the correct answer. Assigning a reference to a subclass,
+though, requires an explicit cast, making Option A incorrect. Option C is also incorrect
+because an interface does not inherit from a class. A reference to an interface requires
+an explicit cast to be assigned to a reference of any class, even one that implements
+the interface. An interface reference requires an explicit cast to be assigned to a class
+reference. Finally, Option D is incorrect. An explicit cast is not required to assign a
+reference to a class that implements an interface to a reference of the interface.
+
+30. C. Both of these descriptions refer to variable and static method hiding, respectively,
+making Option C correct. Only instance methods can be overridden, making Options A
+and B incorrect. Option D is also incorrect because replacing is not a real term in this
+context.
+
+31. B. The code does not compile, so Option D is incorrect. The issue here is that the
+override of getEqualSides() in Square is invalid. A static method cannot override a
+non-static method and vice versa. For this reason, Option B is the correct answer.
+
+33. B. A class can trivially be assigned to a superclass reference variable but requires an
+explicit cast to be assigned to a subclass reference variable. For these reasons, Option
+B is correct.
+
+35. D. First of all, interfaces can only contain abstract, final, and default methods. The
+method fly() defined in CanFly is not marked static or default and defines an
+implementation, an empty {}, meaning it cannot be assumed to be abstract;
+therefore, the code does not compile. Next, the implementation of fly(int speed) in
+the Bird class also does not compile, but not because of the signature. The method
+body fails to return an int value. Since it is an overloaded method, if it returned a
+value it would compile without issue. Finally, the Eagle class does not compile
+because it extends the Bird class, which is marked final and therefore, cannot be
+extended. For these three reasons, Option D is the correct answer.
+
+36. B. Abstract classes and interfaces can both contain static and abstract methods as
+well as static variables, but only an interface can contain default methods.
+Therefore, Option B is correct.
+
+37. C. Java does not allow multiple inheritance, so having one class extend two interfaces
+that both define the same default method signature leads to a compiler error, unless
+the class overrides the method. In this case, though, the talk(String...) method
+defined in the Performance class is not an overridden version of method defined in the
+interfaces because the signatures do not match. Therefore, the Performance class does
+not compile since the class inherits two default methods with the same signature and
+no overridden version, making Option C the correct answer.
+
+40. A. The code compiles without issue, so Option D is incorrect. Java allows methods to
+be overridden, but not variables. Therefore, marking them final does not prevent
+them from being reimplemented in a subclass. Furthermore, polymorphism does not
+apply in the same way it would to methods as it does to variables. In particular, the
+reference type determines the version of the secret variable that is selected, making
+the output 2 and Option A the correct answer.
+
+41. D. Options A and C are incorrect because an overridden method cannot reduce the
+visibility of the inherited method. Option B is incorrect because an overridden method
+cannot declare a broader checked exception than the inherited method. Finally, Option
+D is the correct answer. The removal of the checked exception, the application of a
+broader access modifier, and the addition of the final attribute are allowed for
+overridden methods.
+
+42. C. The setAnimal() method requires an object that is Dog or a subclass of Dog. Since
+Husky extends Dog, Options A and B both allow the code to compile. Option D is also
+valid because a null value does not have a type and can be assigned to any reference
+variable. Option C is the only value that prevents the code from compiling because
+Wolf is not a subclass of Dog. Even though Wolf can be assigned to the instance Canine
+variable, the setter requires a compatible parameter.
+
+43. A. An interface method can be abstract and not have a body, or it can be default or
+static and have a body. An interface method cannot be final though, making Option
+A the correct answer.
+
+44. A. It looks like getSpace() in the Room class is an invalid override of the version in the
+House class since package-private is a more restrictive access modifier than protected,
+but the parameter list changes; therefore, this is an overloaded method, not an
+overridden one. Furthermore, the Ballroom class is abstract so no object is
+instantiated, but there is no requirement that an abstract class cannot contain a
+runnable main() method. For these reasons, the code compiles and runs without issue,
+making Option A correct.
+
+45. D. Trick question! Option A seems like the correct answer, but the second part of the
+sentence is false, regardless of whether you insert overloaded or overridden.
+Overridden methods must have covariant return types, which may not be exactly the
+same as the type in the parent class. Therefore, Option D is the correct answer.
+
+46. B. If a parent class does not include a no-argument constructor, a child class can still
+explicitly declare one; it just has to call an appropriate parent constructor with
+super(), making Option A incorrect. If a parent class does not include a no-argument
+constructor, the child class must explicitly declare a constructor, since the compiler
+will not be able to insert the default no-argument constructor, making Option B
+correct. Option C is incorrect because a parent class can have a no-argument
+constructor, while its subclasses do not. If Option C was true, then all classes would be
+required to have no-argument constructors since they all extend java.lang.Object,
+which has a no-argument constructor. Option D is also incorrect. The default noargument
+constructor can be inserted into any class that directly extends a class that
+has a no-argument constructor. Therefore, no constructors in the subclass are
+required.
+
+48. A. The play() method is overridden in Violin for both MusicCreator and
+StringInstrument, so the return type must be covariant with both. Long is a subclass of
+Number, and therefore, it is covariant with the version in MusicCreator. Since it
+matches the type in StringInstrument, it can be inserted into the blank and the code
+would compile. While Integer is a subclass of Number, meaning the override for
+MusicCreator is valid, it is not a subclass of Long used in StringInstrument. Therefore,
+using Integer would cause the code to not compile. Finally, Number is compatible with
+the version of the method in MusicCreator but not with the version in
+StringInstrument, because Number is a superclass of Long, not a subclass. For these
+reasons, Long is the only class that allows the code to compile, making Option A the
+correct answer.
+
+49. B. The primary motivation for adding default interface methods to Java was for
+backward compatibility. These methods allow developers to update older classes with
+a newer version of an interface without breaking functionality in the existing classes,
+making Option B the correct answer. Option is A is nonsensical and not the correct
+answer. Options C and D sound plausible, but both could be accomplished with static
+interface methods alone.
+
+50. C. The rule for overriding a method with exceptions is that the subclass cannot throw
+any new or broader checked exceptions. Since IOException is a superclass of
+EOFException, from the question description, we see that this is a broader exception
+and therefore not compatible. For this reason, the code does not compile, and Option
+C is the correct answer.
