@@ -20,38 +20,38 @@ My Answers:
 16 - C [OK]
 17 - C [AMBIGUOUS] book isn't correct
 18 - D [FAIL]
-19 - C [] REVIEW
+19 - C [FAIL]
 20 - C [OK]
 21 - A [OK]
-22 - A []
-23 - C []
-24 - C []
-25 - A [] REVIEW
+22 - A [FAIL]
+23 - C [OK]
+24 - C [OK]
+25 - A [OK]
 26 - B [OK]
 27 - C [OK]
 28 - C [OK]
-29 - A [OK] REVIEW
-30 - A []
-31 - A [] REVIEW
+29 - A [OK]
+30 - A [OK]
+31 - A [OK]
 32 - C [OK]
-33 - C []
+33 - C [OK]
 34 - C [OK]
-35 - B []
-36 - C []
-37 - D []
+35 - B [OK]
+36 - B [OK]
+37 - C [OK]
 38 - A [OK]
 39 - B [OK] 
-40 - D [] REVIEW
-41 - B [] REVIEW
-42 - A [] REVIEW
-43 - B []
-44 - D [] REVIEW
-45 - A []
-46 - A []
+40 - D [FAIL]
+41 - D [OK]
+42 - C [OK]
+43 - B [OK]
+44 - A [OK]
+45 - A [FAIL]
+46 - A [FAIL]
 47 - D [OK]
-48 - D [] REVIEW
-49 - A []
-50 - B [] REVIEW
+48 - D [FAIL]
+49 - A [FAIL]
+50 - C [OK]
 
 20/50 = 40.00% [FAILED]
 
@@ -117,63 +117,10 @@ extends or interface it implements could be used as the data type for unknownBun
 Option B is the false statement and the correct answer. An object can be assigned to a
 reference variable type that it inherits, such as Object unknownBunny = new Bunny().
 
-23. D. An abstract method cannot include the final or private method. If a class
-contained either of these modifiers, then no concrete subclass would ever be able to
-override them with an implementation. For these reasons, Options A and B are
-incorrect. Option C is also incorrect because the default keyword applies to concrete
-interface methods, not abstract methods. Finally, Option D is correct. The protected,
-package-private, and public access modifiers can each be applied to abstract methods.
-
-24. D. The declaration of Sphere compiles without issue, so Option C is incorrect. The Mars
-class declaration is invalid because Mars cannot extend Sphere, an interface, nor can
-Mars implement Planet, a class. In other words, they are reversed. Since the code does
-not compile, Option D is the correct answer. Note that if Sphere and Planet were
-swapped in the Mars class definition, the code would compile and the output would be
-Mars, making Option A the correct answer.
-
-25. B. A reference to a class can be implicitly assigned to a superclass reference without an
-explicit class, making Option B the correct answer. Assigning a reference to a subclass,
-though, requires an explicit cast, making Option A incorrect. Option C is also incorrect
-because an interface does not inherit from a class. A reference to an interface requires
-an explicit cast to be assigned to a reference of any class, even one that implements
-the interface. An interface reference requires an explicit cast to be assigned to a class
-reference. Finally, Option D is incorrect. An explicit cast is not required to assign a
-reference to a class that implements an interface to a reference of the interface.
-
 30. C. Both of these descriptions refer to variable and static method hiding, respectively,
 making Option C correct. Only instance methods can be overridden, making Options A
 and B incorrect. Option D is also incorrect because replacing is not a real term in this
 context.
-
-31. B. The code does not compile, so Option D is incorrect. The issue here is that the
-override of getEqualSides() in Square is invalid. A static method cannot override a
-non-static method and vice versa. For this reason, Option B is the correct answer.
-
-33. B. A class can trivially be assigned to a superclass reference variable but requires an
-explicit cast to be assigned to a subclass reference variable. For these reasons, Option
-B is correct.
-
-35. D. First of all, interfaces can only contain abstract, final, and default methods. The
-method fly() defined in CanFly is not marked static or default and defines an
-implementation, an empty {}, meaning it cannot be assumed to be abstract;
-therefore, the code does not compile. Next, the implementation of fly(int speed) in
-the Bird class also does not compile, but not because of the signature. The method
-body fails to return an int value. Since it is an overloaded method, if it returned a
-value it would compile without issue. Finally, the Eagle class does not compile
-because it extends the Bird class, which is marked final and therefore, cannot be
-extended. For these three reasons, Option D is the correct answer.
-
-36. B. Abstract classes and interfaces can both contain static and abstract methods as
-well as static variables, but only an interface can contain default methods.
-Therefore, Option B is correct.
-
-37. C. Java does not allow multiple inheritance, so having one class extend two interfaces
-that both define the same default method signature leads to a compiler error, unless
-the class overrides the method. In this case, though, the talk(String...) method
-defined in the Performance class is not an overridden version of method defined in the
-interfaces because the signatures do not match. Therefore, the Performance class does
-not compile since the class inherits two default methods with the same signature and
-no overridden version, making Option C the correct answer.
 
 40. A. The code compiles without issue, so Option D is incorrect. Java allows methods to
 be overridden, but not variables. Therefore, marking them final does not prevent
@@ -182,32 +129,7 @@ apply in the same way it would to methods as it does to variables. In particular
 reference type determines the version of the secret variable that is selected, making
 the output 2 and Option A the correct answer.
 
-41. D. Options A and C are incorrect because an overridden method cannot reduce the
-visibility of the inherited method. Option B is incorrect because an overridden method
-cannot declare a broader checked exception than the inherited method. Finally, Option
-D is the correct answer. The removal of the checked exception, the application of a
-broader access modifier, and the addition of the final attribute are allowed for
-overridden methods.
-
-42. C. The setAnimal() method requires an object that is Dog or a subclass of Dog. Since
-Husky extends Dog, Options A and B both allow the code to compile. Option D is also
-valid because a null value does not have a type and can be assigned to any reference
-variable. Option C is the only value that prevents the code from compiling because
-Wolf is not a subclass of Dog. Even though Wolf can be assigned to the instance Canine
-variable, the setter requires a compatible parameter.
-
-43. A. An interface method can be abstract and not have a body, or it can be default or
-static and have a body. An interface method cannot be final though, making Option
-A the correct answer.
-
-44. A. It looks like getSpace() in the Room class is an invalid override of the version in the
-House class since package-private is a more restrictive access modifier than protected,
-but the parameter list changes; therefore, this is an overloaded method, not an
-overridden one. Furthermore, the Ballroom class is abstract so no object is
-instantiated, but there is no requirement that an abstract class cannot contain a
-runnable main() method. For these reasons, the code compiles and runs without issue,
-making Option A correct.
-
+[very specific question about covariant return types]
 45. D. Trick question! Option A seems like the correct answer, but the second part of the
 sentence is false, regardless of whether you insert overloaded or overridden.
 Overridden methods must have covariant return types, which may not be exactly the
@@ -244,9 +166,3 @@ a newer version of an interface without breaking functionality in the existing c
 making Option B the correct answer. Option is A is nonsensical and not the correct
 answer. Options C and D sound plausible, but both could be accomplished with static
 interface methods alone.
-
-50. C. The rule for overriding a method with exceptions is that the subclass cannot throw
-any new or broader checked exceptions. Since IOException is a superclass of
-EOFException, from the question description, we see that this is a broader exception
-and therefore not compatible. For this reason, the code does not compile, and Option
-C is the correct answer.
