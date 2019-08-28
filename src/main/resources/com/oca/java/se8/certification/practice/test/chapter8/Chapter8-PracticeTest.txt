@@ -37,23 +37,23 @@ My Answers:
 33 - B [FAIL]
 34 - C [OK]
 35 - B [OK]
-36 - B []
+36 - A [OK]
 37 - C [OK]
-38 - A []
-39 - B []
-40 - D [OK] REVIEW
-41 - C [OK] REVIEW
-42 - A [] REVIEW
+38 - C [OK]
+39 - B [FAIL]
+40 - D [OK]
+41 - C [OK]
+42 - D [OK]
 43 - D [OK]
 44 - D [OK]
 45 - C [OK]
 46 - D [OK]
-47 - C [] REVIEW
+47 - D [OK]
 48 - D [OK]
-49 - A [OK] REVIEW
-50 - B [] REVIEW
+49 - A [OK]
+50 - B [OK]
 
-xx/xx = xx.00% [xxx]
+40/50 = 80.00% [xxx]
 
 Incorrect Answer.
 
@@ -141,74 +141,3 @@ value is null, then the toString() method will cause a NullPointerException to b
 thrown. In both cases, the finally block will execute first, printing Posted:, even if
 there is an exception. For this reason, the first statement is not a possible output, and
 Option B is correct.
-
-36. A. ClassCastException is a subclass of RuntimeException, so it must appear first in any
-related catch blocks. If RuntimeException was to appear before ClassCastException,
-then the ClassCastException block would be considered unreachable code, since any
-thrown ClassCastException is already handled by the RuntimeException catch block.
-For this reason, Option A is correct.
-
-38. C. The code does not compile due to an invalid override of the operate() method. An
-overridden method must not throw any new or broader checked exceptions than the
-method it inherits. Even though RuntimeException is a subclass of Exception,
-Exception is considered a new checked exception, since RuntimeException is an
-unchecked exception. Therefore, the code does not compile, and Option C is correct.
-
-39. D. A NullPointerException is an unchecked exception. While it can be handled by the
-surrounding method, either through a try-catch block or included in the method
-declaration, these are optional. For this reason, Option D is correct.
-
-40. D. In this application, the throw RuntimeException(String) statement in the zipper()
-method does not include the new keyword. The new keyword is required to create the
-object being thrown, since RuntimeException(String) is a constructor. For this reason,
-the code does not compile, and Option D is correct. If the keyword new was inserted
-properly, then the try block would throw a CastClassException, which would be
-replaced with a RuntimeException to the calling method by the catch block. The catch
-block in the main() method would then be activated, and no output would be printed,
-making Option C correct.
-
-41. C. For this question, notice that all the exceptions thrown or caught are unchecked
-exceptions. First, the ClassCastException is thrown in the try block and caught by the
-second catch block since it inherits from RuntimeException, not
-IllegalArgumentException. Next, a NullPointerException is thrown, but before it can
-be returned the finally block is executed and a RuntimeException replaces it. The
-application exits and the caller sees the RuntimeException in the stack trace, making
-Option C the correct answer. If the finally block did not throw any exceptions, then
-Option B would be the correct answer.
-
-42. D. Trick question! Options A, B, and C are each invalid overrides of the method
-because the return type must be covariant with void. For this reason, Option D is the
-correct answer. If the return types were changed to be void, then Option A would be a
-valid override. Options B and C would still be incorrect, since overridden methods
-cannot throw broader checked exceptions than the inherited method.
-
-47. D. The question is designed to see how closely you pay attention to throw and throws!
-The try block uses the incorrect keyword, throws, to create an exception. For this
-reason, the code does not compile, and Option D is correct. If throws was changed to
-throw, then the code would compile without issue, and Option B would be correct.
-
-49. C. While a catch block is permitted to include an embedded try-catch block, the issue
-here is that the variable name e is already used by the first catch block. In the second
-catch block, it is equivalent to declaring a variable e twice. For this reason, line z1 does
-not compile, and Option C is the correct answer. If a different variable name was used
-for either catch block, then the code would compile without issue, and Option A would
-be the correct answer.
-
-50. B. The finally block of the snore() method throws a new checked exception on line
-x1, but there is no try-catch block around it to handle it, nor does the snore() method
-declare any checked exceptions. For these reasons, line x1 does not compile, and
-Option B is the correct answer. The rest of the lines of code compile without issue,
-even line x3 where a static method is being accessed using an instance reference.
-Note that the code inside the try block, if it ran, would produce an
-ArrayIndexOutOfBoundsException, which would be caught by the RuntimeException
-catch block, printing Awake!. What happens next would depend on how the finally
-block was corrected.
-
-
-
-
-
-
-
-
-
