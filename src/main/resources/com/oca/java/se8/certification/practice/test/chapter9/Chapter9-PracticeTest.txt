@@ -1,60 +1,150 @@
-page xxx to xxx
+page 154 to 168
 
 My Answers:
 
-1  - C []
-2  - D []
-3  - D []
-4  - C []
-5  - C []
-6  - C []
-7  - B [] review
-8  - A []
-9  - C [] review
-10 - D []
-11 - D []
-12 - A [] review
-13 - A [] ?? review
-14 - A []
-15 - D []
-16 - B []
-17 - D [] ??review
-18 - A []
-19 - B []
-20 - C []
-21 - B []
-22 - D []
-23 - B []
-24 - B []
-25 - C []
-26 - C [] review
-27 - D []
-28 - C [] review
-29 - B [] 
-30 - C [] review
-31 - D []
-32 - B [] review
-33 - C [] review
-34 - B [] review
-35 - A []
-36 - C []
-37 -  []
-38 -  []
-39 -  []
-40 -  []
-41 -  []
-42 -  []
-43 -  []
-44 -  []
-45 -  []
-46 -  []
-47 -  []
-48 -  []
-49 -  []
-50 -  []
+1  - C [OK]
+2  - D [OK]
+3  - D [OK]
+4  - B [OK]
+5  - B [OK]
+6  - C [OK]
+7  - B [FAIL]
+8  - A [OK]
+9  - C [OK]
+10 - D [OK]
+11 - D [OK]
+12 - A [FAIL]
+13 - A [FAIL]
+14 - A [OK]
+15 - D [OK]
+16 - B [FAIL]
+17 - D [FAIL]
+18 - A [OK]
+19 - A [OK]
+20 - C [OK]
+21 - A [OK]
+22 - D [OK]
+23 - D [OK]
+24 - B [OK]
+25 - C [FAIL]
+26 - C [FAIL]
+27 - D [FAIL]
+28 - C [OK]
+29 - B [OK] 
+30 - D [OK]
+31 - D [OK]
+32 - B [OK]
+33 - A [OK]
+34 - B [OK]
+35 - A [FAIL]
+36 - C [OK]
+37 - B [OK]
+38 - B [OK]
+39 - A [FAIL]
+40 - C [OK]
+41 - A [FAIL]
+42 - B [OK]
+43 - C [OK]
+44 - C [OK]
+45 - D [OK]
+46 - B [FAIL]
+47 - A [FAIL]
+48 - D [OK]
+49 - C [OK]
+50 - A []
 
-XX/XX = xx.00% [xxx]
+28/50= 56.00% [xxx]
 
 Incorrect Answer.
 
-Answers page xx
+Answers page 472
+
+7. C. Calling the constructor and then insert() is an example of method chaining.
+However, the sb.length() call is a problem. The sb reference doesn’t exist until after
+the chained calls complete. Just because it happens to be on a separate line doesn’t
+change when the reference is created. Since the code does not compile, Option C is
+correct.
+
+9. C. On line 12, the value of the StringBuilder is 12. On line 13, it becomes 123. Since
+StringBuilder is mutable, storing the result in the same reference is redundant. Then
+on line 14, the value is reversed, giving us 321 and making Option C correct.
+
+12. D. The add() and get() methods are available on ArrayList. However, ArrayList uses
+size rather than length to get the number of elements. Therefore, Option D is correct.
+If length was changed to size, Option B would compile if put in the blank. Option A
+still wouldn’t compile in the blank because a cast would be needed to store the value
+in str.
+
+13. D. Option A is tricky, but incorrect. While a lambda can have zero parameters, a
+Predicate cannot. A Predicate is defined as a type mapping to a boolean. Option B is
+clearly incorrect as -> separates the parts of a lambda. Options C and D are similar.
+Option C is incorrect because return is only allowed when the brackets are present.
+Option D is correct.
+
+16. A. When creating a lambda with only one parameter, there are a few variants. The
+pred1 approach shows the shortest way, where the type is omitted and the parentheses
+are omitted. The pred2 approach is similar except it includes the parentheses. Both are
+legal. The pred4 approach is the long way with both the parentheses and type
+specified. The only one that doesn’t compile is pred3. The parentheses are required if
+including the type.
+
+17. A. This is a correct example of code that uses a lambda. The interface has a single
+abstract method. The lambda correctly takes one double parameter and returns a
+boolean. This matches the interface. The lambda syntax is correct. Since 45 is greater
+than 5, Option A is correct.
+
+25. B. The <> is known as the diamond operator. Here, it works as a shortcut to avoid
+repeating the generic type twice for the same declaration. On the right side of the
+expression, this is a handy shortcut. Java still needs the type on the left side so there is
+something to infer. In the figure, position P is the left side and position Q is the right
+side. Therefore, Option B is correct.
+
+26. D. The type in the lambda must match the generic declared on the Predicate. In this
+case, that is String. Therefore, Options A and B are incorrect. While Option C is of the
+correct type, it uses the variable s, which is already in use from the main() method
+parameter. Therefore, none of these are correct, and Option D is the answer.
+
+27. A. A String is immutable so a different object is returned on line 6. The object
+anotherLine points to is of length 2 after line 6 completes. However, the original line
+reference still points to an object of length 1. Therefore, Option A is correct.
+
+30. D. Line 4 creates a String of length 5. Since String is immutable, line 5 creates a new
+String with the value 1 and assigns it to builder. Remember that indexes in Java
+begin with 0, so the substring() method is taking the values from the fifth element
+through the end. Since the first element is the last element, there’s only one character
+in there. Then line 6 tries to retrieve the second indexed element. Since there is only
+one element, this gives a StringIndexOutOfBoundsException, and Option D is correct.
+
+39. C. The trim() method returns a String with all leading and trailing white space
+removed. In this question, that’s the seven-character String: ":) - (:". Options A and
+B are incorrect because they do not remove the first blank space in happy. Option D is
+incorrect because it does not remove the last character in happy. Therefore, Option C is
+correct.
+
+41. D. Line 4 creates a StringBuilder of length 5. Pay attention to the substring()
+method StringBuilder. It returns a String with the value 321. It does not change the
+StringBuilder itself. Then line 6 is retrieving the second indexed element from that
+unchanged value, which is 4. Therefore, Option D is correct.
+
+46. D. There are two signatures for the replace() method. One takes two char parameters.
+The other signature takes a CharSequence. Both String and StringBuilder implement
+this interface. This makes all three alternatives correct, and Option D is correct.
+
+47. C. Pay attention to the data types. The print() method is looping through a list of
+String objects. However, the Predicate expects an Integer. Since these don’t match,
+the if statement does not compile.
+
+50. C. The Java 8 date and time classes are immutable. This means they do not contain
+setter methods and the code does not compile.
+
+
+
+
+
+
+
+
+
+
+
+
